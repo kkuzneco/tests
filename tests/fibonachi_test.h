@@ -41,6 +41,7 @@ TEST(group1, test2){
 
         fflush(stdout);
         dup2(oldOutput, 1);
+        //
 
         //5. Закрыть поток, открыть рез-т, сравнить с оригиналом
         SUCCEED();
