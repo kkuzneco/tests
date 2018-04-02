@@ -4,6 +4,7 @@
 #include <gtest/gtest.h>
 #include <fcntl.h>
 #include <unistd.h>
+#include <errno.h>
 
 extern "C" {
 #include "common.h"
