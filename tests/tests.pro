@@ -14,7 +14,7 @@ QMAKE_CXXFLAGS += -fprofile-arcs -ftest-coverage
 QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
-DEFINES +=INPUTDIR=\\\"$$PWD/tests\\\"
+DEFINES +=INPUTDIR=\\\"$$PWD/data\\\"
 
 HEADERS +=     tst_test1.h \
     fibonachi_test.h \

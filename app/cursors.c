@@ -61,6 +61,7 @@ int c_to_pos(text txt, int _line, int pos){
 void print_cursor(text txt){
     int i;
     node *line = txt->cursor->line;
+    assert(line != NULL);
     /* Сдвиг части строки за курсором вправо */
     for(i = strlen(line->contents); i > txt->cursor->position; i--)
 		line->contents[i]= line->contents[i - 1];

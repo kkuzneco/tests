@@ -17,7 +17,8 @@ void load(text txt, char *filename)
 {
     FILE *f;
 
-    char buf[MAXLINE + 1];
+    char buf[MAXLINE + 2];
+    buf[MAXLINE+1] = '\0';
 
     /* Открываем файл для чтения, контролируя ошибки */
     if ((f = fopen(filename, "r")) == NULL) {
