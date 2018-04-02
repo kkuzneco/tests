@@ -1,0 +1,50 @@
+/**
+ * process_forward.c -- реализует обобщенную функцию обработки текста
+ *
+ * Copyright (c) 2017, Alexander Borodin <aborod@petrsu.ru>
+ *
+ * This code is licensed under a MIT-style license.
+ */
+
+#include "_text.h"
+
+/**
+ * Обрабатывает список, применяя заданную функцию к каждой строке
+ * 
+ * @param txt текст
+ * @param process функция-обработчик
+ * @returns none
+ */
+void process_forward(text txt, void (*process)(int index, char *contents))
+{   
+    /* Проверяем, имеется ли текст */
+    if (txt == NULL || txt->length == 0) {
+        fprintf(stderr, "There are already no any lines in the text!\n");
+        return;
+    } 
+    
+    /* Текст ненулевой длины должен содержать хотя бы одну строку */
+    assert(txt->begin != NULL && txt->end != NULL);
+    
+    /* Стартуем с начальной строки текста */
+    node *current = txt->begin;
+    int index = 0, i;
+ 
+    
+    /* Вставляем в текст курсор */
+     while(current){
+	if(current == txt->cursor->line){
+	    for(i=strlen(current->contents); i > txt->cursor->position; i--)
+		current->contents[i]= current->contents[i - 1];
+	    (current->contents)[txt->cursor->position]='|';
+	}
+	/* К каждой строке текста применяем обработчик */
+	process(index, current->contents);
+	/* Удаляем курсор из текста */
+	if(current == txt->cursor->line)
+	    for(i = txt->cursor->position; i < strlen(current->contents); i++)
+		current->contents[i]= current->contents[i + 1];
+	current = current->next;
+        index++;
+    }
+}
