@@ -1,2 +1,2 @@
-[![Build Status](https://travis-ci.org/seekerk/gtest.svg?branch=master)](https://travis-ci.org/seekerk/gtest)
-[![Coverage Status](https://coveralls.io/repos/seekerk/gtest/badge.svg?branch=master)](https://coveralls.io/github/seekerk/gtest?branch=master)
+[![Build Status](https://travis-ci.org/kkuzneco/tests.svg?branch=master)](https://travis-ci.org/kkuzneco/tests)
+[![Coverage Status](https://coveralls.io/repos/kkuzneco/tests/badge.svg?branch=master)](https://coveralls.io/github/kkuzneco/tests?branch=master)
