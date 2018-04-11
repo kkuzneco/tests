@@ -19,11 +19,11 @@
 void showodd(text txt)
 {
     /* Вставляет курсор в текст */
-    print_cursor(txt);
+ //   print_cursor(txt);
     /* Применяем функцию show_odd к каждой строке текста */
     process_forward(txt, show_odd);
     /* Удаляет курсор из текста */
-    remove_cursor(txt);
+   // remove_cursor(txt);
 }
 
 /**

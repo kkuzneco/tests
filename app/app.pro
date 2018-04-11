@@ -34,5 +34,6 @@ QMAKE_CFLAGS += -fprofile-arcs -ftest-coverage
 LIBS += -lgcov
 
 DISTFILES += \
-    text.txt \
-    text.txt
+    text1.txt \
+    text2.txt \
+    text3.txt
